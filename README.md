@@ -1,111 +1,235 @@
-# 🔍 Quick Search: The Google for Developers ( ISE_11-Capstone-Project )
+A Unified Educational Resource Search Engine with Intelligent Ranking
 
-Quick Search is an **aggregated search platform** that unifies results from multiple developer-focused sources into a single, ranked interface. Instead of performing separate searches across **GitHub**, **YouTube**, **Kaggle**, and **academic platforms**, Quick Search automates this process and delivers **optimized, consolidated, and intelligently ranked results**.
+A full-stack federated search engine that retrieves and ranks educational resources from YouTube, GitHub, arXiv, and Kaggle — built using HTML5, CSS3, JavaScript, PHP, and MySQL (XAMPP).
 
----
+Overview
 
-## 🚀 Core Principle: Aggregated Search
+Study Search solves the problem of browsing multiple platforms separately for educational content.
+It provides a single smart interface that offers:
 
-Quick Search operates on the principle of **federated search**, similar to a personal assistant that queries multiple sources and synthesizes a cohesive summary.  
+Unified search
 
-The methodology consists of three main steps:
+Intelligent ranking
 
-1. **Source Identification** – Automatically detects relevant sources for the query.  
-   *Example:* A query like `Python` triggers searches across GitHub, YouTube, Kaggle, and scholarly databases.  
+Personalized recommendations
 
-2. **Result Integration** – Consolidates results from all sources into a unified list.  
+Secure login system
 
-3. **Duplicate Elimination** – Removes redundant or overlapping entries to ensure clean, unique results.  
+Admin dashboard
 
----
+Fast, clean, responsive UI
 
-## 🧠 Advanced Ranking Methodology
+Features
+1. Federated Search (Multi-platform)
 
-Quick Search doesn’t rely on **keyword matching** alone. Instead, it uses **semantic analysis** and **metadata signals** to determine result quality.
+Search simultaneously across:
 
-### 1. Content Relevance Analysis
-- **Code & Papers:** BM25 and AI models (e.g., BERT) to capture semantic meaning.  
-- **Videos & Datasets:** Keyword extraction from transcripts and dataset documentation.  
+YouTube – Tutorials and educational videos
 
-### 2. Metadata Attributes
+GitHub – Code repositories
 
-| Source         | Key Signals                 | Why It Matters |
-|----------------|-----------------------------|----------------|
-| **GitHub**     | Stars, Forks, Last Updated | Popularity & project activity |
-| **YouTube**    | Views, Likes, Chapters     | Engagement & structured learning |
-| **Kaggle**     | Downloads, Freshness, License | Usage, timeliness, trust |
-| **Research**   | Citations, Venue           | Academic influence & quality |
+arXiv – Research papers
 
----
+Kaggle – Datasets
 
-## ⚙️ Ranking Process
+2. Intelligent Ranking
 
-Quick Search follows a **multi-stage scoring pipeline**:
+Uses platform-specific formulas:
 
-1. **Result Acquisition:** Uses official APIs to fetch results & metadata.  
-2. **Individual Scoring:** Computes **content** + **metadata** scores per item.  
-3. **Score Normalization:** Normalizes scales (e.g., GitHub stars vs Kaggle downloads) using techniques like **Z-scoring**.  
-4. **Aggregate Score:** Combines normalized scores with a configurable weighting formula.  
-5. **Final Ranking:** Produces a single ordered list across all sources.  
+Platform	Ranking Factors
+YouTube	Likes + Views
+GitHub	Stars + Forks
+arXiv	Recency score
+Kaggle	Downloads + Usability
+3. Personalized Recommendation System
 
----
+Based on:
 
-## 🖥️ Implementation & User Experience
+Search history
 
-- **Tech Stack**
-  - **Frontend:** React  
-  - **Backend:** Python (APIs, ranking, normalization logic)  
+User behaviour
 
-- **User Interface**
-  - Clean, intuitive search bar  
-  - Filters for result type (`Code`, `Video`, `Dataset`, `Paper`)  
-  - Transparent ranking explanation (e.g., *"Ranked highly due to 5,000+ stars"*)  
+Ranked result logs
 
-- **Compliance**
-  - Strict adherence to API policies & platform regulations  
+4. Secure Authentication
 
----
+Registration and Login
 
-## 📌 Example Workflow
+Password hashing
 
-**Query:** `Machine Learning`  
+Session handling
 
-1. GitHub → Top repos (sorted by stars, forks, recency)  
-2. YouTube → Educational videos with high views/likes and chapters  
-3. Kaggle → Datasets with high downloads and recent activity  
-4. Research → Peer-reviewed papers with strong citation counts  
+5. Admin Dashboard
 
-**Output:** A single ranked feed, e.g.  
+Admin can view:
+
+All users
+
+Feedback
+
+Search logs
+
+Database tables
+
+6. Modern UI Features
+
+Responsive layout
+
+Skeleton loaders
+
+Card-based results display
+
+Clean intuitive design
+
+Tech Stack
+Frontend
+
+HTML5
+
+CSS3
+
+JavaScript
+
+Backend
+
+PHP (v8.x)
+
+MySQL (XAMPP)
+
+APIs Used
+
+YouTube Data API v3
+
+GitHub REST API
+
+arXiv API
+
+Kaggle API
+
+Tools
+
+XAMPP
+
+VS Code
+
+GitHub
+
+Database Structure
+
+Tables included:
+
+users
+
+search_history
+
+feedback
+
+recommendations
+
+All tables are linked for ranking, suggestions, and admin monitoring.
+
+System Workflow
+
+User logs in
+
+Enters a search query
+
+Selects category → Videos / Code / Papers / Datasets
+
+Backend fetches API results
+
+Ranking algorithm sorts and displays results
+
+Search saved and used for recommendations
+
+User can submit feedback
+
+Admin can view all stored data
+
+Project Folder Structure
+Study-Search/
+│── index.html
+│── login.php
+│── register.php
+│── home.php
+│── search.php
+│── recommendations.php
+│── feedback.php
+│── /api
+│    ├── youtube.php
+│    ├── github.php
+│    ├── arxiv.php
+│    └── kaggle.php
+│── /assets
+│    ├── css/
+│    ├── js/
+│    └── images/
+│── /database
+│    ├── db_connect.php
+│    ├── create_tables.sql
+│── README.md
+
+Testing and Evaluation
+Functional
+
+Works across all modules
+
+Ranking validated
+
+APIs returning consistent results
+
+Usability
+
+User-friendly
+
+Responsive
+
+Clean layout
+
+Performance
+Component	Average Time
+YouTube API	2.1s
+GitHub API	1.8s
+arXiv API	1.6s
+Kaggle API	2.3s
+Database Queries	<0.5s
+Security
+
+Password hashing
+
+SQL Injection protection
+
+Session expiry
+
+How to Run (XAMPP)
+
+Install XAMPP
+
+Move project folder to:
+
+C:/xampp/htdocs/
 
 
----
+Start Apache and MySQL
 
-## 📅 Roadmap
+Create the database using create_tables.sql in phpMyAdmin
 
-- [ ] Implement API integration for all sources  
-- [ ] Build ranking pipeline (BM25 + metadata weighting)  
-- [ ] Develop React frontend with filters & ranking transparency  
-- [ ] Optimize duplicate elimination logic  
-- [ ] Deploy MVP  
+Visit:
 
----
+http://localhost/Study-Search/
 
-## 🤝 Contribution
+Future Enhancements
 
-We welcome contributions!  
-- Fork this repo  
-- Create a feature branch (`git checkout -b feature-name`)  
-- Submit a pull request  
+AI-based ranking (TF-IDF, semantic embeddings)
 
----
+Cloud hosting (AWS / Azure)
 
-## 📜 License
+Chatbot-based smart queries
 
-This project will comply with all relevant API usage policies and is distributed under the **MIT License**.
+Multi-language search
 
----
+Interactive analytics dashboard
 
-## 🌟 Summary
+Conclusion
 
-Quick Search is an innovative **developer-focused federated search engine**, merging multiple content types (code, videos, datasets, papers) into one platform, ranked by **semantic relevance + metadata signals**, with transparency and simplicity at its core.
-
+Study Search integrates four major educational platforms into one smart dashboard, saving time and improving learning. With intelligent ranking, personalized recommendations, and full-stack implementation, it delivers a scalable solution for modern learners.
