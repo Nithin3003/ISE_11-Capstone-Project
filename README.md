@@ -1,38 +1,39 @@
+📚 Study Search
 A Unified Educational Resource Search Engine with Intelligent Ranking
 
 A full-stack federated search engine that retrieves and ranks educational resources from YouTube, GitHub, arXiv, and Kaggle — built using HTML5, CSS3, JavaScript, PHP, and MySQL (XAMPP).
 
-Overview
+🚀 Overview
 
 Study Search solves the problem of browsing multiple platforms separately for educational content.
 It provides a single smart interface that offers:
 
-Unified search
+🔍 Unified search
 
-Intelligent ranking
+⭐ Intelligent ranking
 
-Personalized recommendations
+🎯 Personalized recommendations
 
-Secure login system
+🔐 Secure login system
 
-Admin dashboard
+📊 Admin dashboard
 
-Fast, clean, responsive UI
+⚡ Fast, clean, responsive UI
 
-Features
-1. Federated Search (Multi-platform)
+🎯 Features
+🔹 1. Federated Search (Multi-platform)
 
 Search simultaneously across:
 
-YouTube – Tutorials and educational videos
+📺 YouTube – Tutorials and educational videos
 
-GitHub – Code repositories
+💻 GitHub – Code repositories
 
-arXiv – Research papers
+📄 arXiv – Research papers
 
-Kaggle – Datasets
+📊 Kaggle – Datasets
 
-2. Intelligent Ranking
+🔹 2. Intelligent Ranking
 
 Uses platform-specific formulas:
 
@@ -41,7 +42,7 @@ YouTube	Likes + Views
 GitHub	Stars + Forks
 arXiv	Recency score
 Kaggle	Downloads + Usability
-3. Personalized Recommendation System
+🔹 3. Personalized Recommendation System
 
 Based on:
 
@@ -51,15 +52,15 @@ User behaviour
 
 Ranked result logs
 
-4. Secure Authentication
+🔹 4. Secure Authentication
 
-Registration and Login
+Registration & Login
 
 Password hashing
 
 Session handling
 
-5. Admin Dashboard
+🔹 5. Admin Dashboard
 
 Admin can view:
 
@@ -71,17 +72,17 @@ Search logs
 
 Database tables
 
-6. Modern UI Features
+🔹 6. Modern UI Features
 
 Responsive layout
 
-Skeleton loaders
+Skeleton loaders (CSS animations)
 
 Card-based results display
 
 Clean intuitive design
 
-Tech Stack
+🛠 Tech Stack
 Frontend
 
 HTML5
@@ -114,9 +115,8 @@ VS Code
 
 GitHub
 
-Database Structure
-
-Tables included:
+🗄 Database Structure
+Tables Included
 
 users
 
@@ -128,25 +128,25 @@ recommendations
 
 All tables are linked for ranking, suggestions, and admin monitoring.
 
-System Workflow
+🔄 System Workflow
 
-User logs in
+User logs in.
 
-Enters a search query
+Enters a search query.
 
-Selects category → Videos / Code / Papers / Datasets
+Selects category → Videos / Code / Papers / Datasets.
 
-Backend fetches API results
+Backend fetches API results.
 
-Ranking algorithm sorts and displays results
+Ranking algorithm sorts and displays results.
 
-Search saved and used for recommendations
+Search saved → used for recommendations.
 
-User can submit feedback
+User can submit feedback.
 
-Admin can view all stored data
+Admin can view all stored data.
 
-Project Folder Structure
+📂 Project Folder Structure
 Study-Search/
 │── index.html
 │── login.php
@@ -169,8 +169,8 @@ Study-Search/
 │    ├── create_tables.sql
 │── README.md
 
-Testing and Evaluation
-Functional
+🧪 Testing & Evaluation
+⚙ Functional
 
 Works across all modules
 
@@ -178,7 +178,7 @@ Ranking validated
 
 APIs returning consistent results
 
-Usability
+🎨 Usability
 
 User-friendly
 
@@ -186,14 +186,14 @@ Responsive
 
 Clean layout
 
-Performance
-Component	Average Time
+⚡ Performance
+Component	Avg. Time
 YouTube API	2.1s
 GitHub API	1.8s
 arXiv API	1.6s
 Kaggle API	2.3s
-Database Queries	<0.5s
-Security
+DB Queries	<0.5s
+🔐 Security
 
 Password hashing
 
@@ -201,24 +201,24 @@ SQL Injection protection
 
 Session expiry
 
-How to Run (XAMPP)
+🔌 How to Run (XAMPP)
 
-Install XAMPP
+Install XAMPP.
 
 Move project folder to:
 
 C:/xampp/htdocs/
 
 
-Start Apache and MySQL
+Start Apache & MySQL.
 
-Create the database using create_tables.sql in phpMyAdmin
+Create the database using create_tables.sql in phpMyAdmin.
 
 Visit:
 
 http://localhost/Study-Search/
 
-Future Enhancements
+🔮 Future Enhancements
 
 AI-based ranking (TF-IDF, semantic embeddings)
 
@@ -229,7 +229,3 @@ Chatbot-based smart queries
 Multi-language search
 
 Interactive analytics dashboard
-
-Conclusion
-
-Study Search integrates four major educational platforms into one smart dashboard, saving time and improving learning. With intelligent ranking, personalized recommendations, and full-stack implementation, it delivers a scalable solution for modern learners.
